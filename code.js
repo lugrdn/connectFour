@@ -42,8 +42,70 @@ function gt(x, y) {
             }
         }
         else { }
-        
-
+        //vertical
+        if (board[x][y] + board[x+1][y] + board[x+2][y] + board[x-1][y] == 4 || board[x][y] +  board[x-1][y] + board[x-2][y] + board[x+1][y] == 4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x+3][y] == 4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x-3][y] == 4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x-1][y] == -4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x+1][y] == -4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x+3][y] == -4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x-3][y] == -4) {
+            if (turn == 1 * -1) {
+                document.getElementById('winText').textContent = 'Black Wins!';
+                gameRunning = false;
+                blackWins++;
+                document.getElementById('xWins').textContent = blackWins;
+            }
+            else if (turn == -1 * -1) {
+                document.getElementById('winText').textContent = 'Red Wins!';
+                gameRunning = false;
+                redWins++;
+                document.getElementById('oWins').textContent = redWins;
+            }
+        }
+        else{}
+        //horizontal
+        if (board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y-1] == 4 || board[x][y] +  board[x][y-1] + board[x][y-2] + board[x][y+1] == 4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y+3] == 4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y-3] == 4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y-1] == -4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y+1] == -4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y+3] == -4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y-3] == -4) {
+            if (turn == 1 * -1) {
+                document.getElementById('winText').textContent = 'Black Wins!';
+                gameRunning = false;
+                blackWins++;
+                document.getElementById('xWins').textContent = blackWins;
+            }
+            else if (turn == -1 * -1) {
+                document.getElementById('winText').textContent = 'Red Wins!';
+                gameRunning = false;
+                redWins++;
+                document.getElementById('oWins').textContent = redWins;
+            }
+        }
+        else{}
+        //updiagonal
+        if (board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x-1][y+1] == 4 || board[x][y] +  board[x-1][y+1] + board[x-2][y+2] + board[x+1][y-1] == 4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x+3][y-3] == 4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x-3][y+3] == 4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x-1][y+1] == -4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x+1][y-1] == -4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x+3][y-3] == -4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x-3][y+3] == -4) {
+            if (turn == 1 * -1) {
+                document.getElementById('winText').textContent = 'Black Wins!';
+                gameRunning = false;
+                blackWins++;
+                document.getElementById('xWins').textContent = blackWins;
+            }
+            else if (turn == -1 * -1) {
+                document.getElementById('winText').textContent = 'Red Wins!';
+                gameRunning = false;
+                redWins++;
+                document.getElementById('oWins').textContent = redWins;
+            }
+        }
+        else{}
+        //downdiagonal
+        if (board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x-1][y-1] == 4 || board[x][y] +  board[x-1][y-1] + board[x-2][y-2] + board[x+1][y+1] == 4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x+3][y+3] == 4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x-3][y-3] == 4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x-1][y-1] == -4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x+1][y+1] == -4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x+3][y+3] == -4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x-3][y-3] == -4) {
+            if (turn == 1 * -1) {
+                document.getElementById('winText').textContent = 'Black Wins!';
+                gameRunning = false;
+                blackWins++;
+                document.getElementById('xWins').textContent = blackWins;
+            }
+            else if (turn == -1 * -1) {
+                document.getElementById('winText').textContent = 'Red Wins!';
+                gameRunning = false;
+                redWins++;
+                document.getElementById('oWins').textContent = redWins;
+            }
+        }
+        else{}
 
 
 
@@ -117,6 +179,10 @@ function gt(x, y) {
         }
         else { }*/
     }
+}
+
+function gc(x,y)  {
+    return(board[x]||[])[y];
 }
 
 function restart() {
