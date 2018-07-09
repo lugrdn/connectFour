@@ -43,7 +43,7 @@ function gt(x, y) {
         }
         else { }
         //vertical
-        if (board[x][y] + board[x+1][y] + board[x+2][y] + board[x-1][y] == 4 || board[x][y] +  board[x-1][y] + board[x-2][y] + board[x+1][y] == 4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x+3][y] == 4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x-3][y] == 4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x-1][y] == -4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x+1][y] == -4 || board[x][y] + board[x+1][y] + board[x+2][y] + board[x+3][y] == -4 || board[x][y] + board[x-1][y] + board[x-2][y] + board[x-3][y] == -4) {
+        if (gc(x,y) + gc(x+1,y) + gc(x+2,y) + gc(x-1,y) == 4 || gc(x,y) +  gc(x-1,y) + gc(x-2,y) + gc(x+1,y) == 4 || gc(x,y) + gc(x+1,y) + gc(x+2,y) + gc(x+3,y) == 4 || gc(x,y) + gc(x-1,y) + gc(x-2,y) + gc(x-3,y) == 4 || gc(x,y) + gc(x+1,y) + gc(x+2,y) + gc(x-1,y) == -4 || gc(x,y) + gc(x-1,y) + gc(x-2,y) + gc(x+1,y) == -4 || gc(x,y) + gc(x+1,y) + gc(x+2,y) + gc(x+3,y) == -4 || gc(x,y) + gc(x-1,y) + gc(x-2,y) + gc(x-3,y) == -4) {
             if (turn == 1 * -1) {
                 document.getElementById('winText').textContent = 'Black Wins!';
                 gameRunning = false;
@@ -59,7 +59,7 @@ function gt(x, y) {
         }
         else{}
         //horizontal
-        if (board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y-1] == 4 || board[x][y] +  board[x][y-1] + board[x][y-2] + board[x][y+1] == 4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y+3] == 4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y-3] == 4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y-1] == -4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y+1] == -4 || board[x][y] + board[x][y+1] + board[x][y+2] + board[x][y+3] == -4 || board[x][y] + board[x][y-1] + board[x][y-2] + board[x][y-3] == -4) {
+        if (gc(x,y) + gc(x,y+1) + gc(x,y+2) + gc(x,y-1) == 4 || gc(x,y) +  gc(x,y-1) + gc(x,y-2) + gc(x,y+1) == 4 || gc(x,y) + gc(x,y+1) + gc(x,y+2) + gc(x,y+3) == 4 || gc(x,y) + gc(x,y-1) + gc(x,y-2) + gc(x,y-3) == 4 || gc(x,y) + gc(x,y+1) + gc(x,y+2) + gc(x,y-1) == -4 || gc(x,y) + gc(x,y-1) + gc(x,y-2) + gc(x,y+1) == -4 || gc(x,y) + gc(x,y+1) + gc(x,y+2) + gc(x,y+3) == -4 || gc(x,y) + gc(x,y-1) + gc(x,y-2) + gc(x,y-3) == -4) {
             if (turn == 1 * -1) {
                 document.getElementById('winText').textContent = 'Black Wins!';
                 gameRunning = false;
@@ -75,7 +75,7 @@ function gt(x, y) {
         }
         else{}
         //updiagonal
-        if (board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x-1][y+1] == 4 || board[x][y] +  board[x-1][y+1] + board[x-2][y+2] + board[x+1][y-1] == 4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x+3][y-3] == 4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x-3][y+3] == 4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x-1][y+1] == -4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x+1][y-1] == -4 || board[x][y] + board[x+1][y-1] + board[x+2][y-2] + board[x+3][y-3] == -4 || board[x][y] + board[x-1][y+1] + board[x-2][y+2] + board[x-3][y+3] == -4) {
+        if (gc(x,y) + gc(x+1,y-1) + gc(x+2,y-2) + gc(x-1,y+1) == 4 || gc(x,y) +  gc(x-1,y+1) + gc(x-2,y+2) + gc(x+1,y-1) == 4 || gc(x,y) + gc(x+1,y-1) + gc(x+2,y-2) + gc(x+3,y-3) == 4 || gc(x,y) + gc(x-1,y+1) + gc(x-2,y+2) + gc(x-3,y+3) == 4 || gc(x,y) + gc(x+1,y-1) + gc(x+2,y-2) + gc(x-1,y+1) == -4 || gc(x,y) + gc(x-1,y+1) + gc(x-2,y+2) + gc(x+1,y-1) == -4 || gc(x,y) + gc(x+1,y-1) + gc(x+2,y-2) + gc(x+3,y-3) == -4 || gc(x,y) + gc(x-1,y+1) + gc(x-2,y+2) + gc(x-3,y+3) == -4) {
             if (turn == 1 * -1) {
                 document.getElementById('winText').textContent = 'Black Wins!';
                 gameRunning = false;
@@ -91,7 +91,7 @@ function gt(x, y) {
         }
         else{}
         //downdiagonal
-        if (board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x-1][y-1] == 4 || board[x][y] +  board[x-1][y-1] + board[x-2][y-2] + board[x+1][y+1] == 4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x+3][y+3] == 4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x-3][y-3] == 4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x-1][y-1] == -4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x+1][y+1] == -4 || board[x][y] + board[x+1][y+1] + board[x+2][y+2] + board[x+3][y+3] == -4 || board[x][y] + board[x-1][y-1] + board[x-2][y-2] + board[x-3][y-3] == -4) {
+        if (gc(x,y) + gc(x+1,y+1) + gc(x+2,y+2) + gc(x-1,y-1) == 4 || gc(x,y) +  gc(x-1,y-1) + gc(x-2,y-2) + gc(x+1,y+1) == 4 || gc(x,y) + gc(x+1,y+1) + gc(x+2,y+2) + gc(x+3,y+3) == 4 || gc(x,y) + gc(x-1,y-1) + gc(x-2,y-2) + gc(x-3,y-3) == 4 || gc(x,y) + gc(x+1,y+1) + gc(x+2,y+2) + gc(x-1,y-1) == -4 || gc(x,y) + gc(x-1,y-1) + gc(x-2,y-2) + gc(x+1,y+1) == -4 || gc(x,y) + gc(x+1,y+1) + gc(x+2,y+2) + gc(x+3,y+3) == -4 || gc(x,y) + gc(x-1,y-1) + gc(x-2,y-2) + gc(x-3,y-3) == -4) {
             if (turn == 1 * -1) {
                 document.getElementById('winText').textContent = 'Black Wins!';
                 gameRunning = false;
